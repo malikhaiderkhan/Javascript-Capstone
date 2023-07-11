@@ -9,7 +9,7 @@ const display = (data) => {
             <div class='card-img'><img src='${list.image}' /></div>
             <div class='card-title'><h4>${list.title}</h4></div>
             <div class='card-price'><h5>$${list.price}</div>
-            <button class='btn' href='https://fakestoreapi.com/products/${list.description}'>Check Item</button>
+            <button class='btn' href='https://fakestoreapi.com/products/${list.id}'>Check Item</button>
         `;
 
         productContainer.appendChild(productWrap);
