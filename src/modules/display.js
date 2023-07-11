@@ -1,3 +1,4 @@
+import commentbtn from '../assets/comment.png';
 const productContainer = document.querySelector('.products');
 
 const display = (data) => {
@@ -8,7 +9,7 @@ const display = (data) => {
         productWrap.innerHTML = `
             <div class='card-img'><img src='${list.image}' /></div>
             <div class='card-title'><h4>${list.title}</h4></div>
-            <div class='card-price'><h5>$${list.price}</div>
+            <div class='card-price'><h5>$${list.price}</h5><div class='comment'><img src='${commentbtn}' /></div></div>
             <button class='btn' href='https://fakestoreapi.com/products/${list.id}'>Check Item</button>
         `;
 
