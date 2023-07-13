@@ -72,6 +72,7 @@ body {
 
   .card-like img {
     width: 5%;
+    cursor: pointer;
   }
 
   .comment img {
@@ -88,6 +89,7 @@ body {
     padding: 8px 16px;
     border-radius: 4px;
     border: none;
+    cursor: pointer;
   }
 
   .toolbar {
