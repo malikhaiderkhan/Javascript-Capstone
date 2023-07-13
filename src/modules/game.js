@@ -26,17 +26,6 @@ class Game {
         throw new Error('unknown error');
       }
     }
-
-    async addNewApp() {
-      const response = await fetch(this.#INVOLVEMENT_API_ENDPOINT, {
-        headers: {
-          'Content-Type': 'application/json; charset=utf-8',
-        },
-        method: 'POST',
-
-      });
-      return response;
-    }
 }
 
 export default Game;
