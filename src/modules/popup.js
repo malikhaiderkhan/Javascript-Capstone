@@ -73,12 +73,10 @@ const openPopup = async (url) => {
           <p>Count: ${data.rating && data.rating.count}</p>
         </div>
       </div>
-      <hr>
       <div class="get-comment">
         <h3>Comments</h3>
         <ul id="comment-list"></ul>
       </div>
-      <hr>
       <form id="comment-form">
         <h3>Add a comment</h3>
         <div>
