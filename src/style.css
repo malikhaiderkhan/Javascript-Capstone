@@ -129,4 +129,63 @@ body {
     color: #fff;
     text-decoration: none;
   }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    overflow-y: auto;
+  }
+
+  .popup .popup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popup img {
+    width: 85%;
+    padding-top: 25px;
+  }
+
+  .popup-content h2 {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .popup .close-icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .popbot,
+  .popbot2 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+
+  .popbot #p1 {
+    padding-right: 130px;
+  }
+
+  .popbot2 #p2 {
+    padding-right: 130px;
+  }
+
+  .popup .close-icon:hover {
+    color: red;
+  }
 }
