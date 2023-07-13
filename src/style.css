@@ -45,7 +45,7 @@ body {
 
   .card-img img {
     width: 50%;
-    height: 50%;
+    height: 100%;
   }
 
   .card-title h4 {
