@@ -12,9 +12,9 @@ const display = (data) => {
             <div class='card-img'><img src='${list.image}' /></div>
             <div class='card-title'><h4>${list.title}</h4></div>
             <div class='card-price'><h5>$${list.price}</h5></div>
-            <div class='card-like'><img src='${likes}' class='likes' id='${list.id}' /><span id='${list.id}' class='nlikes'></span> Likes</div>
-            <button class='btn btn-comment'>Comments <img src='${commentbtn}' /></button>
-            <button class='btn' id='${list.id}'>Check Item</button>
+            <div class='card-like'><img src='${likes}' class='likes' /> <span id='likes'>0</span> Likes</div>
+            <button class='btn btn-comment' data-url='https://fakestoreapi.com/products/${list.id}'>Comments <img src='${commentbtn}' /></button>
+            <button class='btn'>Check Item</button>
         `;
 
     productContainer.appendChild(productWrap);
