@@ -20,7 +20,7 @@ const nav = `
 `;
 
 const renderNav = () => {
-    navWrap.insertAdjacentHTML('beforebegin', nav);
-  };
-  
-  export default renderNav;
+  navWrap.insertAdjacentHTML('beforebegin', nav);
+};
+
+export default renderNav;
