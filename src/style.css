@@ -84,11 +84,11 @@ body {
     align-items: center;
     font-size: 12px;
     gap: 4px;
-    cursor: pointer;
   }
 
   .card-like img {
     width: 5%;
+    cursor: pointer;
   }
 
   .comment img {

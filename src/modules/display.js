@@ -53,6 +53,8 @@ const display = (data) => {
         }),
 
       });
+
+      location.reload();
     });
   });
 };
