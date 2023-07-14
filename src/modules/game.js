@@ -8,10 +8,13 @@ class Game {
 
   #APP_ID;
 
+  #CATEGORY_API_ENDPOINT;
+
   constructor() {
     this.#APP_ID = 'myodB0I2hWMN7rQnMtyn';
     this.#GET_ALL_TEAMS_ENDPOINT = 'https://fakestoreapi.com/products';
     this.#INVOLVEMENT_API_ENDPOINT = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${this.#APP_ID}/likes/`;
+    this.#CATEGORY_API_ENDPOINT = 'https://fakestoreapi.com/products/categories';
   }
 
   async getAllTeams() {
@@ -30,7 +33,7 @@ class Game {
 
   async getCategory() {
     try {
-      const response = await fetch('https://fakestoreapi.com/products/categories');
+      const response = await fetch(this.#CATEGORY_API_ENDPOINT);
       if (response.status === 200) {
         const data = await response.json();
         categoryData(data);
