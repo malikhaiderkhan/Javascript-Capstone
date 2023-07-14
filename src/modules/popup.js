@@ -1,3 +1,5 @@
+import countComments from './commentCounter.js';
+
 const getComments = async (itemID) => {
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/myodB0I2hWMN7rQnMtyn/comments?item_id=${itemID}`;
 
@@ -44,6 +46,10 @@ const refreshComments = async (itemID) => {
     listItem.innerText = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
     commentList.appendChild(listItem);
   });
+
+  const commentsCount = countComments(commentList); // Get the comments count
+  const commentsHeading = document.querySelector('.get-comment h3');
+  commentsHeading.innerText = `Comments (${commentsCount})`; // Display the comments count
 };
 
 const openPopup = async (url) => {

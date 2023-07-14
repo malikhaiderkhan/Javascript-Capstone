@@ -1,10 +1,10 @@
-const item_like = document.querySelector('.likes');
+const itemLike = document.querySelector('.likes');
 
-const initLikes = (game) => {
-    item_like.addEventListener('click', async (e) => {
-        const target = e.target;
-        console.log(target);
-    })
-}
+const initLikes = () => {
+  itemLike.addEventListener('click', async (e) => {
+    const { target } = e;
+    console.log(target);
+  });
+};
 
 export default initLikes;
