@@ -19,30 +19,24 @@ const display = (data) => {
 
     productContainer.appendChild(productWrap);
 
-    const item_like = document.querySelector('.likes');
     productWrap.addEventListener('click', async (e) => {
-        const target = e.target;
-        const parentElement = target.parentNode;
+      const { target } = e;
+      const parentElement = target.parentNode;
 
-        if (parentElement.className === 'likes' ) return;
-        const item = parentElement;
-        const item_id = list.id;
-        const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/myodB0I2hWMN7rQnMtyn/likes/`;
-        await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-            body: JSON.stringify({
-                item_id: item_id
-            }),
-            
-        })
-    })
+      if (parentElement.className === 'likes') return;
+      const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/myodB0I2hWMN7rQnMtyn/likes/';
+      await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+        body: JSON.stringify({
+          item_id: list.id,
+        }),
 
+      });
+    });
   });
-
-}
-
+};
 
 export default display;

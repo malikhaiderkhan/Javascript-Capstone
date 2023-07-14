@@ -4,5 +4,4 @@ import displayPopup from './modules/popup.js';
 
 const products = new Game();
 products.getAllTeams();
-products.addNewApp();
 displayPopup();
