@@ -7,6 +7,21 @@ body {
 }
 
 @media (min-width: 768px) {
+  .all-items-counter {
+    padding: 25px 0;
+  }
+
+  .category {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .cat-list {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #eee;
+  }
   /* products */
   .products-container {
     padding: 2em 0;
