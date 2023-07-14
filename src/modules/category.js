@@ -9,7 +9,6 @@ const categoryData = (data) => {
         container.appendChild(CAT_LIST);
 
     });
-     // Modify this according to your data format and display requirements
      
   }
 
