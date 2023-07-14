@@ -11,8 +11,7 @@ const getComments = async (itemID) => {
     }
     return [];
   } catch (error) {
-    console.error('Error occurred while fetching comments:', error);
-    return [];
+    throw new Error('Error occurred while fetching comments:', error);
   }
 };
 
