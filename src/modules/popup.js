@@ -9,9 +9,10 @@ const getComments = async (itemID) => {
       const comments = await response.json();
       return comments;
     }
-    throw new Error('Failed to retrieve comments');
+    return [];
   } catch (error) {
-    throw new Error('Error occurred while fetching comments');
+    console.error('Error occurred while fetching comments:', error);
+    return [];
   }
 };
 
@@ -41,6 +42,7 @@ const refreshComments = async (itemID) => {
   commentList.innerHTML = '';
 
   const comments = await getComments(itemID);
+
   comments.forEach((comment) => {
     const listItem = document.createElement('li');
     listItem.innerText = `${comment.creation_date} ${comment.username}: ${comment.comment}`;
