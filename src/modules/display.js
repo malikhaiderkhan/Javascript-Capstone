@@ -54,7 +54,7 @@ const display = (data) => {
 
       });
 
-      location.reload();
+      window.location.reload();
     });
   });
 };
