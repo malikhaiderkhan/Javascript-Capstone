@@ -1,0 +1,226 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 30%;
+  }
+
+  .all-items-counter {
+    padding: 25px 0;
+  }
+
+  .category {
+    padding-top: 15px;
+  }
+
+  .cat-list {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #eee;
+  }
+
+  /* products */
+  .products-container {
+    padding: 2em 0;
+    width: 100%;
+  }
+
+  .products {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 340px;
+    height: 320px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px #9c9c9c;
+    border-radius: 10px;
+  }
+
+  .card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .card-img img {
+    width: 50%;
+    height: 100%;
+  }
+
+  .card-title h4 {
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+
+  .card-price h5 {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .card-like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    gap: 4px;
+  }
+
+  .card-like img {
+    width: 5%;
+    cursor: pointer;
+  }
+
+  .comment img {
+    width: 5%;
+  }
+
+  .btn-comment img {
+    width: 10%;
+  }
+
+  .btn {
+    width: 150px;
+    margin: 0 auto;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75% 10.75%;
+    position: relative;
+    z-index: 2;
+    background-color: #000;
+    height: 1px;
+  }
+
+  .logo img {
+    vertical-align: middle;
+  }
+
+  nav a:hover {
+    cursor: pointer;
+  }
+
+  .menu {
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .footer {
+    background-color: red;
+    color: #fff;
+    padding: 1px 0 1px 30px;
+  }
+
+  .footer p a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    height: 400px;
+    overflow-y: auto;
+  }
+
+  .popup .popup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popup img {
+    width: 85%;
+    padding-top: 25px;
+  }
+
+  .popup-content h2 {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .popup .close-icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .coverpop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .popup .close-icon:hover {
+    color: red;
+  }
+
+  #comment {
+    margin: 12px 0 8px 0;
+    width: 200px;
+  }
+
+  .get-comment h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  #comment-form h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  #comment-list {
+    list-style: none;
+  }
+
+  #comment-list li {
+    padding-bottom: 5px;
+  }
+}
