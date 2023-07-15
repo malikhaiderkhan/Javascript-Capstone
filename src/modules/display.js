@@ -2,6 +2,13 @@
 
 import commentbtn from '../assets/comment.png';
 import likes from '../assets/heart.png';
+import logo from '../assets/images/logo.png';
+
+const logoEl = document.querySelector('#logo');
+const logoImg = document.createElement('img');
+logoImg.classList.add('logo');
+logoImg.src = logo;
+logoEl.insertAdjacentElement('beforeend', logoImg);
 
 const productContainer = document.querySelector('.products');
 
