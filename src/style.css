@@ -16,9 +16,7 @@ body {
   }
 
   .category {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
+    padding-top: 15px;
   }
 
   .cat-list {
