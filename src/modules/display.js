@@ -56,7 +56,7 @@ const display = (data) => {
       });
 
       const likesElement = document.getElementById(`likes-${list.id}`);
-      const currentLikes = parseInt(likesElement.textContent);
+      const currentLikes = parseInt(likesElement.textContent, 10);
       likesElement.textContent = currentLikes + 1;
     });
   });
