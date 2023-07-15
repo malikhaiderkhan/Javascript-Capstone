@@ -1,3 +1,5 @@
+// display.js
+
 import commentbtn from '../assets/comment.png';
 import likes from '../assets/heart.png';
 
@@ -19,6 +21,8 @@ const display = (data) => {
 
     productContainer.appendChild(productWrap);
 
+    const heartIcon = productWrap.querySelector('.likes');
+
     // Fetch the number of likes from the API
     fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/myodB0I2hWMN7rQnMtyn/likes/')
       .then((response) => response.json())
@@ -37,11 +41,9 @@ const display = (data) => {
         throw new Error('Error fetching likes:', error);
       });
 
-    productWrap.addEventListener('click', async (e) => {
-      const { target } = e;
-      const parentElement = target.parentNode;
+    heartIcon.addEventListener('click', async (e) => {
+      e.stopPropagation();
 
-      if (parentElement.className === 'likes') return;
       const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/myodB0I2hWMN7rQnMtyn/likes/';
       await fetch(url, {
         method: 'POST',
@@ -51,10 +53,11 @@ const display = (data) => {
         body: JSON.stringify({
           item_id: list.id,
         }),
-
       });
 
-      window.location.reload();
+      const likesElement = document.getElementById(`likes-${list.id}`);
+      const currentLikes = parseInt(likesElement.textContent);
+      likesElement.textContent = currentLikes + 1;
     });
   });
 };
