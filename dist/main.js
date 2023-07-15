@@ -125,7 +125,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst container = document.querySelector('.category');\nconst categoryData = (data) => {\n  container.innerHTML = '';\n  data.forEach((list) => {\n    const CAT_LIST = document.createElement('div');\n    CAT_LIST.classList.add('cat-list');\n    CAT_LIST.innerHTML = `${list} ${list.length}`;\n\n    container.appendChild(CAT_LIST);\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (categoryData);\n\n\n//# sourceURL=webpack://webpack/./src/modules/category.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst categoryData = (data, container) => {\r\n  if (!container) {\r\n    container = document.querySelector('.category'); // Use default container if not provided\r\n  }\r\n  container.innerHTML = '';\r\n  data.forEach((list) => {\r\n    const CAT_LIST = document.createElement('div');\r\n    CAT_LIST.classList.add('cat-list');\r\n    CAT_LIST.innerHTML = `${list} ${list.length}`;\r\n\r\n    container.appendChild(CAT_LIST);\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (categoryData);\n\n//# sourceURL=webpack://webpack/./src/modules/category.js?");
 
 /***/ }),
 
